@@ -1,9 +1,8 @@
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 type News = {
   id: number;
@@ -32,7 +31,9 @@ export default function News({ news }: Props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{news.url}</Button>
+        <Link href={news.url} target="_blank">
+          {news.url}
+        </Link>
       </CardActions>
     </Card>
   );
