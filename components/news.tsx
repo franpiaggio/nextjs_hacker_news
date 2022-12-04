@@ -105,9 +105,11 @@ export default function News({ index, news }: Props) {
                 <Box component="span" sx={styles.url}>
                   | {getHost(news.url)}
                 </Box>
-                <Box component="span" sx={styles.kids}>
-                  | {news.kids.length} comments
-                </Box>
+                {news.kids?.length ? (
+                  <Box component="span" sx={styles.kids}>
+                    | {news.kids.length} comments
+                  </Box>
+                ) : null}
               </Typography>
             </Box>
           </Stack>

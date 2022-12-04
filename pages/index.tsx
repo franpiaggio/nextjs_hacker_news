@@ -38,7 +38,6 @@ export default function Home({ topStories, hasNext }: any) {
   if (!topStories.length) {
     return <h1>No data</h1>;
   }
-  console.log(topStories);
   return (
     <>
       <Head>
