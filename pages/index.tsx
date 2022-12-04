@@ -5,7 +5,7 @@ import Paginator from "@/components/paginator";
 // TODO: work on news types
 export async function getServerSideProps(context: any) {
   const { page = 1 } = context.query;
-  const pageSize = 5;
+  const pageSize = 10;
   let hasNext = true;
 
   const queryPage = page === 1 ? 0 : page - 1;
